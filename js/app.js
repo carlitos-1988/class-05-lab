@@ -116,11 +116,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  let stringForArray = 'The numbers 2,3,4 have a product of 24.';
+  let resultOfAll = 1;
+  for(let i =0; i<multArr.length;i++){
+    resultOfAll = multiply(resultOfAll,multArr[i])[0];
+  }
 
+  return [resultOfAll, stringForArray];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -151,7 +157,7 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   for(let i=0; i< dynamicArray.length; i++){
     result = multiply(result,dynamicArray[i])[0];
   }
-  console.log(result + ' ' + stringArray);
+  //console.log(result + ' ' + stringArray);
   return [result,stringArray];
 
 }
